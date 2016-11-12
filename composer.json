@@ -1,4 +1,17 @@
 {
+  "name": "heathnaylor/sinch-php",
+  "type": "wrapper",
+  "description": "PHP Wrapper for Sinch API",
+  "keywords": [
+    "sinch"
+  ],
+  "homepage": "https://github.com/HeathNaylor/sinch-php",
+  "authors": [
+    {
+      "name": "Heath Naylor",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "HeathNaylor\\SinchPhp\\": "Src/"
