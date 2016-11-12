@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.4/phpunit.xsd"
+         bootstrap="Tests/BaseTest.php"
+         backupGlobals="false"
+         verbose="true"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+>
+    <testsuites>
+        <testsuite name="Base">
+            <directory>Tests/Services/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">Src/</directory>
+            <exclude>
+                <directory suffix=".php">vendor/</directory>
+                <directory suffix=".php">Tests/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="out/base/coverage" highLowerBound="90" lowUpperBound="25"/>
+        <log type="coverage-clover" target="out/base/clover.xml"/>
+        <log type="coverage-crap4j" target="out/base/crap4j.xml"/>
+        <log type="junit" target="out/base/junit.xml" logIncompleteSkipped="false"/>
+    </logging>
+    <php>
+        <const name="BASEPATH" value="."/>
+    </php>
+</phpunit>
